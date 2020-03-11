@@ -1,10 +1,15 @@
-var diameter;
 const pi = 3.14;
-var text;
-text = "de omtrek van de cirkel is ";
+let numWaarde;
+let result;
+
 function calculate() {
-  diameter = document.getElementById("num");
-  diameter = diameter.value;
-  result = pi * diameter;
-  document.getElementById("output").innerText = text + result;
+  numWaarde = document.getElementById("num").value;
+  result = pi * numWaarde;
+  document.getElementById("output").innerText = result;
+
+  {
+    numWaarde = numWaarde * 0.5;
+    result = numWaarde * numWaarde * pi;
+    document.getElementById("output1").innerText = result;
+  }
 }
